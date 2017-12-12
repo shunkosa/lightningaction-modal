@@ -1,0 +1,35 @@
+<aura:component >
+    <aura:attribute name="title" type="String" />
+    <aura:attribute name="percentWidth" type="Integer" default="50" />
+    <aura:attribute name="bodyHeight" type="Integer" default="250" />
+    <aura:attribute name="body" type="Object" />
+    <aura:attribute name="footer" type="Object" />
+    <style>
+        .cuf-content{
+        padding:0 !important;
+        }
+        .slds-p-around--medium{
+        padding:0 !important;
+        }
+        .slds-modal__container{        
+        width:{!v.percentWidth}% !important;
+        max-width:{!v.percentWidth}% !important;
+        }
+        .slds-modal__content{
+        overflow-y:hidden !important;
+        height:unset !important;
+        max-height:unset !important;
+        }
+    </style>
+    <header class="slds-modal__header">
+        <h2 class="slds-text-heading_medium">
+            <ui:outputText value="{!v.title}" />
+        </h2>
+    </header>
+    <div style="{! 'height:' + v.bodyHeight + 'px;max-height:' + v.bodyHeight + 'px;overflow-y: auto !important;'}">
+        {!v.body}
+    </div>
+    <footer class="slds-modal__footer">
+        {!v.footer}
+    </footer>
+</aura:component>
