@@ -1,9 +1,8 @@
 <aura:component >
     <aura:attribute name="title" type="String" />
     <aura:attribute name="percentWidth" type="Integer" default="50" />
-    <aura:attribute name="bodyHeight" type="Integer" default="250" />
-    <aura:attribute name="body" type="Object" />
-    <aura:attribute name="footer" type="Object" />
+    <aura:attribute name="height" type="Integer" default="250" />
+    <aura:attribute name="footer" type="Aura.Component[]" />
     <style>
         .cuf-content{
         padding:0 !important;
